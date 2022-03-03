@@ -19,9 +19,9 @@ public class spiretSarte : MonoBehaviour
     public bool head_On = true;
     #endregion
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetMouseButtonDown(1))
         {
             if (head_On != true) { return; }
             GameObject bullet = Instantiate(HeadBullet, pos_head_shot.position, pos_head_shot.rotation);

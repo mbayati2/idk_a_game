@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f710163282bccb245b7331f5893bae05
+guid: b0c99c79f3cd4cb40bbe0f20b21e288b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,9 +45,9 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.48428124, y: 0.64277864}
+  spritePivot: {x: 0.52832144, y: 0.65273345}
   spritePixelsToUnits: 25
-  spriteBorder: {x: 16, y: 27, z: 19, w: 9}
+  spriteBorder: {x: 19, y: 27, z: 16, w: 9}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -111,9 +111,7 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 4e2d83f19afed0042846de249367b7f0, type: 3}
-      name: Goplow
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
