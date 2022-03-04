@@ -3453,7 +3453,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _detectorCount: 3
-  _detectionRayLength: 0.24
+  _detectionRayLength: 0.18
   _rayBuffer: 0.1
   _acceleration: 12.85
   _moveClamp: 6.5
