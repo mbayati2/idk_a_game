@@ -299,7 +299,7 @@ MonoBehaviour:
   up_dowm: {x: 0, y: 1, z: 0}
   gamepir: {fileID: 3193072022395904368, guid: 85ba0e1dac91536409ebb40ee78e39bf, type: 3}
   picanle: 0
-  startpos: {fileID: 0}
+  startpos: {fileID: 1483617051004597222}
   endpos: {fileID: 0}
   jourbeyTime: 0.5
   speed: 1

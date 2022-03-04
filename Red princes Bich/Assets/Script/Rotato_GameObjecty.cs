@@ -65,7 +65,6 @@ public class Rotato_GameObjecty : MonoBehaviour
     private void GetCenter(Vector3 up)
     {
         if (endpos == null) { endpos = GetTransform(); }
-        if (startpos == null) { startpos = Startpos(); }
         centerPoint = (startpos.position + endpos.position) * 0.25f;
         centerPoint -= up;
         startRelCenter = startpos.position - centerPoint;
@@ -74,10 +73,6 @@ public class Rotato_GameObjecty : MonoBehaviour
     private Transform GetTransform()
     {
         return getrengerse.it.EndPOint;
-    }
-    private Transform Startpos()
-    {
-        return getrengerse.it.startpos;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
