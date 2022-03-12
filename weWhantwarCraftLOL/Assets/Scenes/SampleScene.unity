@@ -396,6 +396,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &984396522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984396520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d07f722dc623d47a60051f9fa56c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 492122995}
+  anim: {fileID: 984396521}
 --- !u!1 &1209733712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1110,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.91416454, g: 0.9245283, b: 0.53640085, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
