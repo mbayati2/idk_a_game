@@ -21,5 +21,6 @@ public class Porjectal : MonoBehaviour
             Destroy(gameObject);
             powerEffect.Apply(Hit);
         }
+        
     }
 }
