@@ -7,6 +7,8 @@ public class CameraMoment : MonoBehaviour
     [SerializeField] float panBorderThickness = 10f;
     [SerializeField] Vector3 player_pos;
     [SerializeField] Transform Player;
+    [SerializeField] KeyCode keyCode;
+    [SerializeField] bool dontMove;
 
     // Update is called once per frame
     void Update()
@@ -34,7 +36,18 @@ public class CameraMoment : MonoBehaviour
             pos = player_pos;
             Debug.Log("owo");
         }
-
+        if (Input.GetKeyDown(keyCode))
+        {
+            if (dontMove == true)
+            {
+               dontMove = false;
+            }
+            else if (dontMove == false)
+            {
+                dontMove = true;
+            }
+        }
+        if (dontMove==true) { return; }
         transform.position = pos;
     }
 }
