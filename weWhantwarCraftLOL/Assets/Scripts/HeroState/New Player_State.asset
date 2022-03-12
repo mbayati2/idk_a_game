@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   Max_health: 200
+  mana: 90
+  Max_mana: 190
   damage: 21
   Ability: 100
   arrmor: 32
   magicPen: 45
   Crite: 0
   IceCream: 1
-  Hero_icon: {fileID: 0}
+  Hero_icon: {fileID: 21300000, guid: a5514ba6217718f4e98daf1d16001d8e, type: 3}
   prefabe: {fileID: 746659770185323270, guid: 76b01f2fb3ef151438ae0999863389cd, type: 3}
