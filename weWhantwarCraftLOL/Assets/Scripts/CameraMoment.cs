@@ -30,7 +30,7 @@ public class CameraMoment : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            player_pos = new Vector3(Player.position.x , transform.position.y, Player.position.z);
+            player_pos = new Vector3(Player.position.x , transform.position.y, Player.position.z - 5);
             pos = player_pos;
             Debug.Log("owo");
         }
