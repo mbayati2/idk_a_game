@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField] NavMeshAgent agent = null;
+    [SerializeField] AnimationCurve plot = new AnimationCurve();
     public Animator anim;
 
     float motionSmoothTime = .1f;
@@ -18,6 +19,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (agent == null) { agent = Player_holder.player_Holder.Local_player.GetComponent<NavMeshAgent>(); }
         float speed = agent.velocity.magnitude / agent.speed;
+        plot.AddKey(Time.realtimeSinceStartup , speed);
         anim.SetFloat("Blend", speed, motionSmoothTime, Time.deltaTime);
     }
 }
