@@ -25,10 +25,19 @@ public class Ablilty_UI : MonoBehaviour
     [SerializeField] Image image_ability4;
     [SerializeField] public Sprite sprite_ability4;
     [SerializeField] private Image Image_BackGround_4; 
+    [SerializeField] Ability_descrpesn ability_Descrpesn1;
+    [SerializeField] Ability_descrpesn ability_Descrpesn2;
+    [SerializeField] Ability_descrpesn ability_Descrpesn3;
+    [SerializeField] Ability_descrpesn ability_Descrpesn4;
+
     private float CoolDownSec_Ability1;
     private float CoolDownSec_Ability2;
     private float CoolDownSec_Ability3;
     private float CoolDownSec_Ability4;
+    bool done1;
+    bool done2;
+    bool done3;
+    bool done4;
     private void Start()
     {
         image_ability1.sprite = sprite_ability1; Image_BackGround_1.sprite = sprite_ability1;
@@ -43,6 +52,7 @@ public class Ablilty_UI : MonoBehaviour
         Ability3();
         Ability4();
     }
+    #region Ability_cool_down_and_UI_Controle
     void Ability1()
     {
         if (isCoolDown_Ability1 == false)
@@ -62,10 +72,11 @@ public class Ablilty_UI : MonoBehaviour
             }
         }
     }
-    public void Ability1_use(float CoolDownSec , string Descrepen)
+    public void Ability1_use(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
     {
         isCoolDown_Ability1 = true;
         CoolDownSec_Ability1 = CoolDownSec;
+        if (!done1) { Ability1_UI(CoolDownSec , Descrepen , name , Mana_Cost); done1=true; }  
     }
         void Ability2()
     {
@@ -86,10 +97,11 @@ public class Ablilty_UI : MonoBehaviour
             }
         }
     }
-    public void Ability2_use(float CoolDownSec , string Descrepen)
+    public void Ability2_use(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
     {
         isCoolDown_Ability2 = true;
         CoolDownSec_Ability2 = CoolDownSec;
+        if (!done2) { Ability2_UI(CoolDownSec , Descrepen , name , Mana_Cost); done2=true; }  
     }
         void Ability3()
     {
@@ -110,10 +122,11 @@ public class Ablilty_UI : MonoBehaviour
             }
         }
     }
-    public void Ability3_use(float CoolDownSec , string Descrepen)
+    public void Ability3_use(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
     {
         isCoolDown_Ability3 = true;
         CoolDownSec_Ability3 = CoolDownSec;
+        if (!done3) { Ability3_UI(CoolDownSec , Descrepen , name , Mana_Cost); done3=true; }  
     }
         void Ability4()
     {
@@ -134,9 +147,39 @@ public class Ablilty_UI : MonoBehaviour
             }
         }
     }
-    public void Ability4_use(float CoolDownSec , string Descrepen)
+        public void Ability4_use(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
     {
         isCoolDown_Ability4 = true;
         CoolDownSec_Ability4 = CoolDownSec;
+        if (!done4) { Ability4_UI(CoolDownSec , Descrepen , name , Mana_Cost); done4=true; }  
+    }
+    #endregion
+        public void Ability1_UI(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
+    {
+        ability_Descrpesn1.cooldown = CoolDownSec;
+        ability_Descrpesn1.Descrepen = Descrepen;
+        ability_Descrpesn1.Namee = name;
+        ability_Descrpesn1.Mana_Cost = Mana_Cost;
+    }
+        public void Ability2_UI(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
+    {
+        ability_Descrpesn2.cooldown = CoolDownSec;
+        ability_Descrpesn2.Descrepen = Descrepen;
+        ability_Descrpesn2.Namee = name;
+        ability_Descrpesn2.Mana_Cost = Mana_Cost;
+    }
+        public void Ability3_UI(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
+    {
+        ability_Descrpesn3.cooldown = CoolDownSec;
+        ability_Descrpesn3.Descrepen = Descrepen;
+        ability_Descrpesn3.Namee = name;
+        ability_Descrpesn3.Mana_Cost = Mana_Cost;
+    }
+        public void Ability4_UI(int CoolDownSec , string Descrepen , string name , int Mana_Cost)
+    {
+        ability_Descrpesn4.cooldown = CoolDownSec;
+        ability_Descrpesn4.Descrepen = Descrepen;
+        ability_Descrpesn4.Namee = name;
+        ability_Descrpesn4.Mana_Cost = Mana_Cost;
     }
 }

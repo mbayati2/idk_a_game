@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ability_Buttom: 113
   CoolDown: 1
+  Mana_Cost: 11
   Ability_Scaling_Ap: 100
   Ability_Scaling_Ad: 0
+  namee: eqeqe
   Descrepen: Fire a Ice in foward dir dealing 30 Ap damage (+ 100 Ability) and give
     1 stack to the enemy 3 sec coolDown
   icon: {fileID: 21300000, guid: 1dbf19f0608c38e49b510f52fbf95747, type: 3}

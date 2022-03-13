@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ability_Buttom: 114
   CoolDown: 30
+  Mana_Cost: 80
   Ability_Scaling_Ap: 232
-  Ability_Scaling_Ad: 0
-  Descrepen: 
+  Ability_Scaling_Ad: 6
+  namee: SHIT
+  Descrepen: what
   icon: {fileID: 21300000, guid: 789282821503c604cb27da60a72e46c4, type: 3}

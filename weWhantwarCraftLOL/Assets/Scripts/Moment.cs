@@ -8,6 +8,7 @@ public class Moment : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
 
     [SerializeField] float rotateMoment;
+    
     float rotateVelocity;
 
 

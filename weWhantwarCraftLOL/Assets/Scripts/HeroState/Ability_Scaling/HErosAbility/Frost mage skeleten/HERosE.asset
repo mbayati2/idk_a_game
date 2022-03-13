@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ability_Buttom: 101
   CoolDown: 1
+  Mana_Cost: 44
   Ability_Scaling_Ap: 32323
   Ability_Scaling_Ad: 0
-  Descrepen: 
+  namee: FUCK
+  Descrepen: gJJKIKIKDKDKDKDKK GOGOLE
   icon: {fileID: 21300000, guid: fa158c9c8b393da499d4ea6130f49ddc, type: 3}

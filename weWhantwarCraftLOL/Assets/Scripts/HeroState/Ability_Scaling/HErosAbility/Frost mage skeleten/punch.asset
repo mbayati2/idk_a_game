@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ability_Buttom: 119
   CoolDown: 9
+  Mana_Cost: 51
   Ability_Scaling_Ap: 0
   Ability_Scaling_Ad: 123
+  namee: wwas
   Descrepen: puch???
   icon: {fileID: 21300000, guid: d73ecaf327aee24448f346644e5e544b, type: 3}
