@@ -11,4 +11,5 @@ public class Ability : ScriptableObject
     [SerializeField] public float Ability_Scaling_Ap;
     [SerializeField] public float Ability_Scaling_Ad;
     [SerializeField] public string Descrepen;
+    [SerializeField] public Sprite icon;
 }

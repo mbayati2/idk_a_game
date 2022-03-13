@@ -5,7 +5,7 @@ using System;
 
 public class Ability_use : MonoBehaviour
 {
-    [SerializeField] Ability ability1;
+    [SerializeField] public Ability ability1;
     [SerializeField] public bool coolDown_Ability1=true;
     [SerializeField] public event Action<float , string> cooldown_ability1;
     void Update()

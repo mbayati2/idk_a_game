@@ -10,6 +10,7 @@ public class Ability_UI_connect : MonoBehaviour
     {
         ablilty_UI.CoolDownReady1_A += Ability1_bool;
         ability_Use.cooldown_ability1 += ablilty_UI.Ability1_use;
+        ablilty_UI.sprite_ability1 = ability_Use.ability1.icon;
     }
     private void Ability1_bool(bool ioi)
     {

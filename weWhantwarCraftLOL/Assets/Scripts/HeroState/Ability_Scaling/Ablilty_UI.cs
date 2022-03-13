@@ -8,7 +8,7 @@ public class Ablilty_UI : MonoBehaviour
     [SerializeField] public event Action<bool> CoolDownReady1_A;
     [SerializeField] bool isCoolDown_Ability1;
     [SerializeField] Image image_ability1;
-    [SerializeField] Sprite sprite_ability1;
+    [SerializeField] public Sprite sprite_ability1;
     [SerializeField] private Image Image_BackGround_1; 
     private float CoolDownSec_Ability1;
     private void Awake()
