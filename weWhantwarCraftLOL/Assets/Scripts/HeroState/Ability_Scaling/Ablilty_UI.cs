@@ -11,7 +11,7 @@ public class Ablilty_UI : MonoBehaviour
     [SerializeField] public Sprite sprite_ability1;
     [SerializeField] private Image Image_BackGround_1; 
     private float CoolDownSec_Ability1;
-    private void Awake()
+    private void Start()
     {
         image_ability1.sprite = sprite_ability1; Image_BackGround_1.sprite = sprite_ability1;
     }
