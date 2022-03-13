@@ -13,4 +13,5 @@ public class Player_holder : MonoBehaviour
 
     [SerializeField] public GameObject Local_player;
     [SerializeField] public Hero Local_Hero_script;
+    [SerializeField] public Ablilty_UI ablilty_UI;
 }

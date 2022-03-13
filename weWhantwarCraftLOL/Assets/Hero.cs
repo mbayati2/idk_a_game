@@ -12,6 +12,11 @@ public class Hero : MonoBehaviour
     {
         GameObject s = Instantiate(player_state.prefabe, spawnPSL.position - new Vector3(0 , 1.03f,0), transform.rotation);
         s.transform.SetParent(gameObject.transform);
+        StartCoroutine(delay());
+    }
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(1);
         PlayerState_giver(player_state.health, player_state.Max_health , player_state.mana , player_state.Max_mana , player_state.damage , player_state.Ability , player_state.Crite, player_state.magicPen , player_state.arrmor , player_state.IceCream);
     }
 }
