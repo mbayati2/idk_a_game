@@ -41,6 +41,16 @@ public class Hero : MonoBehaviour
         Max_mana += max_mna;
         Mana_Give(Mana , Max_mana);
     }
+    public void helth_Change_Control_Cnter(int Hp, int max_hp)
+    {
+        HP += Hp;
+        Max_health += max_hp;
+        Hp_Give(HP , Max_health);
+        if (HP <= 0)
+        {
+            Debug.Log("died");
+        }
+    }
     public bool Have_enough_mana(int mana_use_amount)
     {
         if(Mana >= mana_use_amount)

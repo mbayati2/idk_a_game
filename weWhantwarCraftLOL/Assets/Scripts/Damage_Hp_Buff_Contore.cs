@@ -8,6 +8,9 @@ public class Damage_Hp_Buff_Contore : PowerEffect
     [SerializeField] int amount;
     public override void Apply(GameObject target)
     {
-        Debug.Log($"Damage{amount}");
+        if(target.TryGetComponent<Hero>(out Hero hero))
+        {
+            hero.helth_Change_Control_Cnter(-amount , 0);
+        }
     }
 }
