@@ -7,14 +7,14 @@ public class Hero : MonoBehaviour
     [SerializeField] public Player_State player_state;
     [SerializeField] Transform spawnPSL;
     [Header("State_Current_State")]
-    [SerializeField] public int HP;
-    [SerializeField] public int Max_health;
-    [SerializeField] public int Damage_AD;
-    [SerializeField] public int Damage_AP;
-    [SerializeField] public int Attack_speed;
-    [SerializeField] public int Attack_Time;
-    [SerializeField] public int Mana;
-    [SerializeField] public int Max_mana;
+    [HideInInspector] public int HP;
+    [HideInInspector] public int Max_health;
+    [HideInInspector] public int Damage_AD;
+    [HideInInspector] public int Damage_AP;
+    [HideInInspector] public int Attack_speed;
+    [HideInInspector] public int Attack_Time;
+    [HideInInspector] public int Mana;
+    [HideInInspector] public int Max_mana;
 
     public event Action<int , int , int , int , int , int , int , int , int , int> PlayerState_giver;
     public event Action<int , int> Hp_Give;
