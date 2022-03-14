@@ -36,6 +36,8 @@ public class Hero : MonoBehaviour
         Max_mana = player_state.Max_mana;
         Damage_AD = player_state.damage;
         Damage_AP = player_state.Ability;
+        Attack_speed = player_state.Attack_speed;
+        Attack_Time = player_state.Attack_Time;
     }
     IEnumerator delay()
     {
