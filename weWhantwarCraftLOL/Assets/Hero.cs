@@ -9,12 +9,17 @@ public class Hero : MonoBehaviour
     [Header("State_Current_State")]
     [SerializeField] public int HP;
     [SerializeField] public int Max_health;
+    [SerializeField] public int Damage_AD;
+    [SerializeField] public int Damage_AP;
+    [SerializeField] public int Attack_speed;
+    [SerializeField] public int Attack_Time;
     [SerializeField] public int Mana;
     [SerializeField] public int Max_mana;
 
     public event Action<int , int , int , int , int , int , int , int , int , int> PlayerState_giver;
     public event Action<int , int> Hp_Give;
     public event Action<int , int> Mana_Give;
+    public event Action<int , int , int> Damage_Give;
 
     private void Start()
     {
@@ -29,6 +34,8 @@ public class Hero : MonoBehaviour
         Max_health = player_state.Max_health;
         Mana = player_state.mana;
         Max_mana = player_state.Max_mana;
+        Damage_AD = player_state.damage;
+        Damage_AP = player_state.Ability;
     }
     IEnumerator delay()
     {
@@ -50,6 +57,12 @@ public class Hero : MonoBehaviour
         {
             Debug.Log("died");
         }
+    }
+    public void Damge_Change_Control_Center(int Damage, int Ability)
+    {
+        Damage_AD += Damage;
+        Damage_AP += Ability;
+        Damage_Give(Damage , Ability , 0);
     }
     public bool Have_enough_mana(int mana_use_amount)
     {

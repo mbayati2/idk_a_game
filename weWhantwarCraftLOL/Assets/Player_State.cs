@@ -11,6 +11,8 @@ public class Player_State : ScriptableObject
    [SerializeField] public int Max_mana;
    [SerializeField] public int damage;
    [SerializeField] public int Ability;
+   [SerializeField] public int Attack_speed;
+   [SerializeField] public int Attack_Time;
    [SerializeField] public int arrmor;
    [SerializeField] public int magicPen;
    [SerializeField] public int Crite;

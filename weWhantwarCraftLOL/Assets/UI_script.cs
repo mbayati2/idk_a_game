@@ -16,6 +16,7 @@ public class UI_script : MonoBehaviour
          Player_holder.player_Holder.Local_Hero_script.PlayerState_giver += Update_Ui;    
          Player_holder.player_Holder.Local_Hero_script.Hp_Give += Update_Ui_HP_Only; 
          Player_holder.player_Holder.Local_Hero_script.Mana_Give += Update_Ui_Mana_Only; 
+         Player_holder.player_Holder.Local_Hero_script.Damage_Give += Update_Ui_Damage_Only; 
          Icon.sprite = Player_holder.player_Holder.Local_Hero_script.player_state.Hero_icon;
     }
     private void Update_Ui(int hp, int max_hp, int mana, int Max_mana, int damage, int Ability, int Crite, int magicPen, int arrmor, int IceCream )
@@ -33,5 +34,9 @@ public class UI_script : MonoBehaviour
         private void Update_Ui_Mana_Only(int Mana, int Max_mana)
     {
         this.Mana.text = $"{Mana}/{Max_mana}";
+    }
+        private void Update_Ui_Damage_Only(int Damage_AD, int Damage_AP, int Crite)
+    {
+        Damage.text = $"{Damage_AD} {Damage_AP} %{Crite}/100";
     }
 }
