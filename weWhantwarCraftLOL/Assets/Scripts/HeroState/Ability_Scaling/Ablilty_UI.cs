@@ -9,22 +9,26 @@ public class Ablilty_UI : MonoBehaviour
     [SerializeField] bool isCoolDown_Ability1;
     [SerializeField] Image image_ability1;
     [SerializeField] public Sprite sprite_ability1;
-    [SerializeField] private Image Image_BackGround_1; 
+    [SerializeField] private Image Image_BackGround_1;
+    [SerializeField] public GameObject INDCATER1; 
         [SerializeField] public event Action<bool> CoolDownReady2_A;
     [SerializeField] bool isCoolDown_Ability2;
     [SerializeField] Image image_ability2;
     [SerializeField] public Sprite sprite_ability2;
     [SerializeField] private Image Image_BackGround_2; 
+    [SerializeField] public GameObject INDCATER2; 
         [SerializeField] public event Action<bool> CoolDownReady3_A;
     [SerializeField] bool isCoolDown_Ability3;
     [SerializeField] Image image_ability3;
     [SerializeField] public Sprite sprite_ability3;
     [SerializeField] private Image Image_BackGround_3; 
+    [SerializeField] public GameObject INDCATER3; 
         [SerializeField] public event Action<bool> CoolDownReady4_A;
     [SerializeField] bool isCoolDown_Ability4;
     [SerializeField] Image image_ability4;
     [SerializeField] public Sprite sprite_ability4;
     [SerializeField] private Image Image_BackGround_4; 
+    [SerializeField] public GameObject INDCATER4; 
     [SerializeField] Ability_descrpesn ability_Descrpesn1;
     [SerializeField] Ability_descrpesn ability_Descrpesn2;
     [SerializeField] Ability_descrpesn ability_Descrpesn3;
@@ -44,6 +48,8 @@ public class Ablilty_UI : MonoBehaviour
         image_ability2.sprite = sprite_ability2; Image_BackGround_2.sprite = sprite_ability2;
         image_ability3.sprite = sprite_ability3; Image_BackGround_3.sprite = sprite_ability3;
         image_ability4.sprite = sprite_ability4; Image_BackGround_4.sprite = sprite_ability4;
+        ability_Descrpesn1.INDCATER = INDCATER1; ability_Descrpesn2.INDCATER = INDCATER2;
+        ability_Descrpesn3.INDCATER = INDCATER3; ability_Descrpesn4.INDCATER = INDCATER4;
     }
     void Update()
     {

@@ -19,10 +19,12 @@ public class Ability_descrpesn : MonoBehaviour, IPointerExitHandler, IPointerEnt
    [SerializeField] private Image icon;
    [SerializeField] private Image icon2;
    [SerializeField] private GameObject ga;
+   [HideInInspector] public GameObject INDCATER;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         ga.SetActive(true);
+        INDCATER.SetActive(true);
        mana.text = $"Mana: {Mana_Cost}";
        namesd.text = Namee;
        dp.text = Descrepen;
@@ -31,6 +33,7 @@ public class Ability_descrpesn : MonoBehaviour, IPointerExitHandler, IPointerEnt
     }
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
+         INDCATER.SetActive(false);
          ga.SetActive(false);
     }
 }

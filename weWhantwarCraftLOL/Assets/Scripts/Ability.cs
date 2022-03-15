@@ -13,5 +13,6 @@ public class Ability : ScriptableObject
     [SerializeField] public int Ability_Scaling_Ad;
     [SerializeField] public string namee;
     [SerializeField] public string Descrepen;
+    [SerializeField] public GameObject Ability_IDCT;
     [SerializeField] public Sprite icon;
 }
