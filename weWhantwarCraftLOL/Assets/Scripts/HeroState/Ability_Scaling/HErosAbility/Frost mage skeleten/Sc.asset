@@ -20,4 +20,5 @@ MonoBehaviour:
   namee: eqeqe
   Descrepen: Fire a Ice in foward dir dealing 30 Ap damage (+ 100 Ability) and give
     1 stack to the enemy 3 sec coolDown
+  Ability_IDCT: {fileID: 2144686541194390927, guid: 77539af314961dc4c8b5ae98a61876c4, type: 3}
   icon: {fileID: 21300000, guid: 1dbf19f0608c38e49b510f52fbf95747, type: 3}

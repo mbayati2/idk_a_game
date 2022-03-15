@@ -19,4 +19,5 @@ MonoBehaviour:
   Ability_Scaling_Ad: 6
   namee: SHIT
   Descrepen: what
+  Ability_IDCT: {fileID: 2144686541194390927, guid: 77539af314961dc4c8b5ae98a61876c4, type: 3}
   icon: {fileID: 21300000, guid: 789282821503c604cb27da60a72e46c4, type: 3}

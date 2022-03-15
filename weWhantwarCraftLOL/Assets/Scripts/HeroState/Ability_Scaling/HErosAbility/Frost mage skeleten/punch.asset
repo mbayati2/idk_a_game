@@ -19,4 +19,5 @@ MonoBehaviour:
   Ability_Scaling_Ad: 123
   namee: wwas
   Descrepen: puch???
+  Ability_IDCT: {fileID: 2144686541194390927, guid: 77539af314961dc4c8b5ae98a61876c4, type: 3}
   icon: {fileID: 21300000, guid: d73ecaf327aee24448f346644e5e544b, type: 3}
