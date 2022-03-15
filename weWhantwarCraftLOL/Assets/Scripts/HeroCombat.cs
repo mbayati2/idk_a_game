@@ -26,13 +26,11 @@ public class HeroCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (targetedEnemy != null)
-        {
+        if (targetedEnemy == null) { return; }
+
             if (Vector3.Distance(gameObject.transform.position, targetedEnemy.transform.position) > attackRange)
             {
                 moveScript.agent.SetDestination(targetedEnemy.transform.position);
-                moveScript.agent.stoppingDistance = attackRange;
-
                 // Rotation
                 Quaternion rotated = Quaternion.LookRotation(targetedEnemy.transform.position - transform.position);
                 float rottaadssY = Mathf.SmoothDampAngle(transform.eulerAngles.y,
@@ -44,6 +42,8 @@ public class HeroCombat : MonoBehaviour
             }
             else
             {
+                moveScript.agent.stoppingDistance = attackRange;
+                Debug.Log("WTF");
                 if (heroAttackType == HeroAttackType.Melee)
                 {
                     if (performMeleeAttack)
@@ -53,6 +53,5 @@ public class HeroCombat : MonoBehaviour
                     }
                 }
             }
-        }
     }
 }

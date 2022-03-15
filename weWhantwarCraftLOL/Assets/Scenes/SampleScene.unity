@@ -7627,6 +7627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc3d802a9740e6a4d9b32f7bb24e9ac6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc3d802a9740e6a4d9b32f7bb24e9ac6, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -7934,7 +7938,7 @@ MonoBehaviour:
   heroAttackType: 0
   targetedEnemy: {fileID: 0}
   attackRange: 2
-  rotateSpeedForAttack: 0.15
+  rotateSpeedForAttack: 0.25
   basicAtkIdle: 0
   isHeroAlive: 0
   performMeleeAttack: 1
@@ -8170,6 +8174,18 @@ PrefabInstance:
     - target: {fileID: 100000, guid: acebd669d34598a40a103042011b1028, type: 3}
       propertyPath: m_Name
       value: Bloom03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: acebd669d34598a40a103042011b1028, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: acebd669d34598a40a103042011b1028, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: acebd669d34598a40a103042011b1028, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: acebd669d34598a40a103042011b1028, type: 3}
       propertyPath: m_RootOrder
@@ -9779,8 +9795,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4646143, z: 1.82316}
-  m_Center: {x: 3.1589398e-10, y: 0.2323072, z: 0.16209203}
+  m_Size: {x: 0.43585435, y: 1.0962986, z: 1.82316}
+  m_Center: {x: -0.02113871, y: 0.41646498, z: 0.16209203}
 --- !u!114 &755409309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11937,7 +11953,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &835968646
 Transform:
@@ -16864,7 +16880,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &871652620
 Transform:
@@ -21671,7 +21687,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &947345516
 Transform:
@@ -22150,7 +22166,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1170770211
 Transform:
@@ -27288,7 +27304,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1256478489
 Transform:
@@ -32283,6 +32299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d834642adc9326645adaa13be7ffc6ab, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d834642adc9326645adaa13be7ffc6ab, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -33156,6 +33176,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloom02
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -33295,7 +33323,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1503188871
 Transform:
@@ -34124,7 +34152,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1694170788
 Transform:
@@ -39265,6 +39293,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
       propertyPath: m_Name
       value: Bloom02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
       propertyPath: m_RootOrder
