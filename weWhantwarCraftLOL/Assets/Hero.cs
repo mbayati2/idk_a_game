@@ -41,7 +41,7 @@ public class Hero : MonoBehaviour
     }
     IEnumerator delay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
         PlayerState_giver(player_state.health, player_state.Max_health , player_state.mana , player_state.Max_mana , player_state.damage , player_state.Ability , player_state.Crite, player_state.magicPen , player_state.arrmor , player_state.IceCream);
     }
     public void Mana_Change_Control_Center(int mna, int max_mna)
