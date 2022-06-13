@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Freya;
 
 public class Test_Script : MonoBehaviour
 {
@@ -13,15 +14,14 @@ public class Test_Script : MonoBehaviour
        
 
         Handles.DrawWireDisc(transform.position , transform.forward , radiuse);
-        for (int i = 0; i < Angeles_Amount; i++)
+        for (int i = 1; i < Angeles_Amount; i++)
         {
-            float Angels = i / Angeles_Amount * Tau;
-            float x = Mathf.Cos(Angels);
-            float y = Mathf.Sign(Angels);
+            i--;
+            float Angels = i / (float)Angeles_Amount  * Tau;
+            Vector2 dir2 = Mathfs.AngToDir(Angels);
 
-            Vector2 dir = new Vector2(x , y).normalized;
 
-            Handles.DrawLine(transform.position , (Vector2)transform.position + dir);
+            Handles.DrawLine(transform.position , (Vector2)transform.position + dir2 * radiuse);
         }
 
    }
