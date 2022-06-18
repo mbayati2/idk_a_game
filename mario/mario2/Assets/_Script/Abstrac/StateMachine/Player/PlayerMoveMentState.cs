@@ -6,7 +6,7 @@ public abstract class PlayerMoveMentState
 {
     public virtual void OnFixedUpdate(PlayerMoveMent player)
     {
-        
+      
     }
 
     public virtual void OnUpdate(PlayerMoveMent player)

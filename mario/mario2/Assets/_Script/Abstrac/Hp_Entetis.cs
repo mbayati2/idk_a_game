@@ -5,10 +5,7 @@ using UnityEngine;
 
 public abstract class Hp_Entetis : MonoBehaviour
 {
-    public int hp;
-    public int current_Hp;
-    private void Awake() => current_Hp = hp;
-
+    public abstract int current_Hp { get; set; }
 
     public virtual void TakeDamage(int amount , GameObject target)
     {

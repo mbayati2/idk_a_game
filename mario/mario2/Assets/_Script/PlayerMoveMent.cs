@@ -74,7 +74,9 @@ public class PlayerMoveMent : MonoBehaviour
 
     private void OnDrawGizmosSelected() {
         Handles.DrawWireDisc(Feet.position , transform.forward , FeetRaidus);
+
     }
 
     #endif
+    
 }
