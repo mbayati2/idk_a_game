@@ -7,6 +7,7 @@ public abstract class Hp_Entetis : MonoBehaviour
 {
     public abstract int current_Hp { get; set; }
 
+
     public virtual void TakeDamage(int amount , GameObject target)
     {
         current_Hp -= amount;
