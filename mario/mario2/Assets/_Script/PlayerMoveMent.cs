@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Threading.Tasks;
+using Cinemachine;
+
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -14,6 +17,7 @@ public class PlayerMoveMent : MonoBehaviour
     [HideInInspector] public float JumpTimerCounter;
     [HideInInspector] public int JumpDone;
     public float JumpTime;
+    public float valueTime;
     public int JumpAmount;
     public int DelayAmountOnJump;
     public bool Grounded;
@@ -21,7 +25,7 @@ public class PlayerMoveMent : MonoBehaviour
     public LayerMask JumpAble;
     public Transform Feet;
     public Rigidbody2D rb;
-
+    public CinemachineVirtualCamera cinemachine;
     public PlayerMoveMentState state;
     public NormalMoveMent normalMoveMent = new NormalMoveMent();
     bool boolisrunnig;
@@ -67,6 +71,7 @@ public class PlayerMoveMent : MonoBehaviour
 
     private void Start() {
         state = normalMoveMent;
+        state.OnStart(this);
     }
 
 
