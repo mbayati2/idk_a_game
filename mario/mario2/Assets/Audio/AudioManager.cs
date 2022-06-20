@@ -9,11 +9,8 @@ namespace Audio {
 		public bool muted;
 
 		public bool muteMusic;
-		
-		public static AudioManager Instance { get; set; }
        
 		void Awake () {
-			Instance = this;
  
 			foreach (Sound s in sounds) {
 				s.source = gameObject.AddComponent<AudioSource>();
@@ -81,6 +78,9 @@ namespace Audio {
 					return;
 				}
 			}
+		}
+		private void Start() {
+			Play("BackGroundMusic1");
 		}
 	}
 }
