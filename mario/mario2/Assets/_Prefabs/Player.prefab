@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 417417349740887400}
   - component: {fileID: 2208237552644880412}
   - component: {fileID: 842118087}
+  - component: {fileID: 966579738}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -206,8 +207,8 @@ Camera:
   m_GameObject: {fileID: 1966087442662078767}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.877881, g: 0.63403344, b: 0.9811321, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.36862746, g: 0.93725497, b: 0.9686275, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -326,6 +327,14 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!81 &966579738
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966087442662078767}
+  m_Enabled: 1
 --- !u!1 &5536513341679768428
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +347,7 @@ GameObject:
   - component: {fileID: 5536513341679768419}
   - component: {fileID: 4758063342376037047}
   - component: {fileID: 5536513341679768418}
-  - component: {fileID: 5536513341679768429}
+  - component: {fileID: 7368166916349133426}
   - component: {fileID: 5536513341679768416}
   m_Layer: 6
   m_Name: Player
@@ -458,8 +467,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5536513341679768429
-BoxCollider2D:
+--- !u!58 &7368166916349133426
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -472,18 +481,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!50 &5536513341679768416
 Rigidbody2D:
   serializedVersion: 4
