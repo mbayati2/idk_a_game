@@ -80,6 +80,9 @@ namespace Audio {
 			}
  		}
 		private void Start() {
+			string wow = "WOW";
+			char[] POPO = wow.ToCharArray();
+			
 			Play("BackGroundMusic1");
 		}
 	}
