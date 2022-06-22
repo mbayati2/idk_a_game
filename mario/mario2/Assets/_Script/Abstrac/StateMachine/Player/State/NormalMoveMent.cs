@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 public class NormalMoveMent : PlayerMoveMentState 
 {
-    private CinemachineTransposer offset;
+    private CinemachineFramingTransposer offset;
     float nomaleValue = 2.17f;
     float LookYDir;
 
     public override void OnStart(PlayerMoveMent player)
     {
-       offset = player.cinemachine.GetCinemachineComponent<CinemachineTransposer>();
+       offset = player.cinemachine.GetCinemachineComponent<CinemachineFramingTransposer>();
     }
     public override void OnUpdate(PlayerMoveMent player)
     {
@@ -36,7 +36,7 @@ public class NormalMoveMent : PlayerMoveMentState
         
 
 
-        offset.m_FollowOffset.y = Mathf.Lerp(offset.m_FollowOffset.y , Amount , player.valueTime * Time.deltaTime);
+        offset.m_TrackedObjectOffset.y = Mathf.Lerp(offset.m_TrackedObjectOffset.y , Amount , player.valueTime * Time.deltaTime);
     }
 
     private float DirAmount()
