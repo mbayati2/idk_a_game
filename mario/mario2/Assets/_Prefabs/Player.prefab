@@ -425,10 +425,12 @@ MonoBehaviour:
   FeetRaidus: 0.3
   JumpTimerCounter: 0.25501382
   JumpDone: 0
+  Inputs: {x: 0, y: 0}
   JumpTime: 0.35
   valueTime: 6
+  coyotiJump: 0.4
+  JumpBufferTime: 0.2
   JumpAmount: 0
-  DelayAmountOnJump: 250
   Grounded: 1
   Jumping: 0
   JumpAble:

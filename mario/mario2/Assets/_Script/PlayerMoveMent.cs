@@ -15,11 +15,13 @@ public class PlayerMoveMent : MonoBehaviour
     public float JumpHiehtAmount;
     public float FeetRaidus;
     [HideInInspector] public float JumpTimerCounter;
-    [HideInInspector] public int JumpDone;
+    public int JumpDone;
+    public Vector2 Inputs;
     public float JumpTime;
-    public float valueTime;
+    public float valueTime;    
+    public float coyotiJump = 0.4f;
+    public float JumpBufferTime = 0.4f;
     public int JumpAmount;
-    public int DelayAmountOnJump;
     public bool Grounded;
     public bool Jumping;
     public LayerMask JumpAble;
@@ -39,6 +41,8 @@ public class PlayerMoveMent : MonoBehaviour
     
     private void FixedUpdate() 
     {
+        Inputs.x = Input.GetAxisRaw("Horizontal");
+        Inputs.y = Input.GetAxisRaw("Vertical");
         state.OnFixedUpdate(this);
     }
 
@@ -46,28 +50,9 @@ public class PlayerMoveMent : MonoBehaviour
     {
         state.OnUpdate(this);
 
-        bool owo = Physics2D.OverlapCircle(Feet.position , FeetRaidus , JumpAble);
-        if (owo == false)
-        {
-            AddExera();
-            return;
-        } 
-        Grounded = true;
-    }
-
-    private async void AddExera()
-    {
-        if (JumpDone > 0) { Grounded = false; return; }
-        if (boolisrunnig == true) { return; }
-
-        boolisrunnig = true;
-
-        await Task.Delay(DelayAmountOnJump);
-
-
         Grounded = Physics2D.OverlapCircle(Feet.position , FeetRaidus , JumpAble);
-        boolisrunnig = false;
     }
+
 
     private void Start() {
         state = normalMoveMent;

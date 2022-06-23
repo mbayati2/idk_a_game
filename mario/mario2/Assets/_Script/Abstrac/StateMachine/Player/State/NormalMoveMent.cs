@@ -2,11 +2,14 @@ using UnityEngine;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class NormalMoveMent : PlayerMoveMentState 
 {
     private CinemachineFramingTransposer offset;
     float nomaleValue = 2.17f;
+    float coyotiJumpCounter;
+    float JumpBufferCounter;
     float LookYDir;
 
     public override void OnStart(PlayerMoveMent player)
@@ -17,15 +20,38 @@ public class NormalMoveMent : PlayerMoveMentState
     {
         JUMPWA(player);
 
-        
+        CoyotiJumptFunc(player);
+        JumpBufferCounterFunc(player);
+
         Jumpo(player);
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             player.Jumping = false;
+            coyotiJumpCounter = 0f;
         }    
 
         LookDir(player);
+    }
+
+    private void JumpBufferCounterFunc(PlayerMoveMent player)
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            JumpBufferCounter = player.JumpBufferTime;
+            return;
+        }
+        JumpBufferCounter -= Time.deltaTime;
+    }
+
+    private void CoyotiJumptFunc(PlayerMoveMent player)
+    {
+        if (player.Grounded)
+        {
+            coyotiJumpCounter = player.coyotiJump;
+            return;
+        }
+        coyotiJumpCounter -= Time.deltaTime;
     }
 
     private void LookDir(PlayerMoveMent player)
@@ -59,33 +85,56 @@ public class NormalMoveMent : PlayerMoveMentState
 
     public override void OnFixedUpdate(PlayerMoveMent player)
     {
-        float moveDir = Input.GetAxisRaw("Horizontal");
-        LookYDir = Input.GetAxisRaw("Vertical");
+        LookYDir = player.Inputs.y;
 
-
-
-
-        player.rb.velocity = new Vector2(moveDir * player.MoveSpeedAmount , player.rb.velocity.y);
+        player.rb.velocity = new Vector2(player.Inputs.x * player.MoveSpeedAmount , player.rb.velocity.y);
     }
 
     private void JUMPWA(PlayerMoveMent player)
     {
-        
-        if (player.JumpAmount == player.JumpDone) { if (player.Grounded == false) { return; } }
+        if (player.JumpAmount > player.JumpDone) 
+        {
+            MoreJumps(player);
+            return;
+        }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (JumpBufferCounter > 0f && coyotiJumpCounter > 0)
         {
             player.Jumping = true;
             player.rb.velocity = Vector2.up * player.JumpHiehtAmount;
             player.JumpDone++;
+            
             if (player.Grounded == true)
             {
                 player.JumpTimerCounter = player.JumpTime;
+                JumpBufferCounter = 0f;
                 player.JumpDone = 0;
             }
-
         }
+
+
+    }
+
+    private void MoreJumps(PlayerMoveMent player)
+    {
+                
+       
+        
+            if (JumpBufferCounter > 0f)
+            {
+                player.Jumping = true;
+                player.rb.velocity = Vector2.up * player.JumpHiehtAmount;
+                player.JumpDone++;
+                if (player.Grounded == true)
+                {
+                    player.JumpTimerCounter = player.JumpTime;
+                    JumpBufferCounter = 0f;
+                    player.JumpDone = 0;
+                }
+            }
+           
+        
     }
 
     void Jumpo(PlayerMoveMent player)
