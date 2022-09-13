@@ -1,22 +1,23 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMoment : MonoBehaviour {
     
-    [SerializeField] private RigidBody2d body2D;
+    [SerializeField] private Rigidbody2D body2D;
     float MovementX;
     float MovementY;
     
-    public void OnPlayerMoveButtomDown()
+    public void OnPlayerMoveButtomDown(InputAction.CallbackContext callbackContext)
     {
 
-        MovementX;
-        MovementY;
+        MovementX = callbackContext.ReadValue<Vector2>().x;
+        MovementY = callbackContext.ReadValue<Vector2>().y;
 
     }
 
     private void Update() {
         
-        body2D.verlocity = new Vector2(MovementX , MovementY).normalized;
+        body2D.velocity = new Vector2(MovementX , MovementY).normalized;
 
     }
 
